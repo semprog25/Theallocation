@@ -96,15 +96,15 @@ export function LandingPage() {
             &copy; 2026 The Allocation. All rights reserved.
           </p>
           <div className="flex gap-8">
-            <span className="text-warm-gray/30 font-sans cursor-pointer hover:text-warm-gray/50 transition-colors" style={{ fontSize: '0.65rem', letterSpacing: '0.05em' }}>
+            <Link to="/terms" className="text-warm-gray/30 font-sans hover:text-warm-gray/50 transition-colors" style={{ fontSize: '0.65rem', letterSpacing: '0.05em' }}>
               Terms
-            </span>
-            <span className="text-warm-gray/30 font-sans cursor-pointer hover:text-warm-gray/50 transition-colors" style={{ fontSize: '0.65rem', letterSpacing: '0.05em' }}>
+            </Link>
+            <Link to="/privacy" className="text-warm-gray/30 font-sans hover:text-warm-gray/50 transition-colors" style={{ fontSize: '0.65rem', letterSpacing: '0.05em' }}>
               Privacy
-            </span>
-            <span className="text-warm-gray/30 font-sans cursor-pointer hover:text-warm-gray/50 transition-colors" style={{ fontSize: '0.65rem', letterSpacing: '0.05em' }}>
+            </Link>
+            <Link to="/confidentiality" className="text-warm-gray/30 font-sans hover:text-warm-gray/50 transition-colors" style={{ fontSize: '0.65rem', letterSpacing: '0.05em' }}>
               Confidentiality
-            </span>
+            </Link>
           </div>
         </div>
       </footer>

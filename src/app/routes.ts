@@ -5,6 +5,9 @@ import { LoginPage } from "./components/LoginPage";
 import { MemberDashboard } from "./components/MemberDashboard";
 import { AuctionDetail } from "./components/AuctionDetail";
 import { AdminDashboard } from "./components/AdminDashboard";
+import { TermsPage } from "./components/TermsPage";
+import { PrivacyPage } from "./components/PrivacyPage";
+import { ConfidentialityPage } from "./components/ConfidentialityPage";
 
 export const router = createHashRouter([
   {
@@ -30,5 +33,17 @@ export const router = createHashRouter([
   {
     path: "/admin",
     Component: AdminDashboard,
+  },
+  {
+    path: "/terms",
+    Component: TermsPage,
+  },
+  {
+    path: "/privacy",
+    Component: PrivacyPage,
+  },
+  {
+    path: "/confidentiality",
+    Component: ConfidentialityPage,
   },
 ]);
