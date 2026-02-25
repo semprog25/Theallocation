@@ -129,16 +129,6 @@ export function LoginPage() {
                 >
                   Continue
                 </button>
-
-                {/* Temporary skip for testing */}
-                <button
-                  type="button"
-                  onClick={() => navigate("/dashboard")}
-                  className="w-full mt-3 py-3 text-warm-gray/30 hover:text-warm-gray/50 transition-colors font-sans tracking-[0.1em] border border-dashed border-border/20 hover:border-border/40 rounded-sm"
-                  style={{ fontSize: '0.6rem' }}
-                >
-                  SKIP — TESTING ONLY
-                </button>
               </form>
             </>
           ) : (
