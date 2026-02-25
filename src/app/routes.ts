@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import { LandingPage } from "./components/LandingPage";
 import { ApplicationPage } from "./components/ApplicationPage";
 import { LoginPage } from "./components/LoginPage";
@@ -9,7 +9,7 @@ import { TermsPage } from "./components/TermsPage";
 import { PrivacyPage } from "./components/PrivacyPage";
 import { ConfidentialityPage } from "./components/ConfidentialityPage";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     Component: LandingPage,
