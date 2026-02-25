@@ -169,14 +169,12 @@ export function PrivacyShield() {
     document.head.appendChild(style);
 
     // Override getDisplayMedia (Screen Capture API)
-    if (navigator.mediaDevices) {
-      const originalGetDisplayMedia = navigator.mediaDevices.getDisplayMedia;
-      navigator.mediaDevices.getDisplayMedia = function () {
+    if (navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia) {
+      const originalGetDisplayMedia = navigator.mediaDevices.getDisplayMedia.bind(navigator.mediaDevices);
+      navigator.mediaDevices.getDisplayMedia = function (constraints?: DisplayMediaStreamOptions) {
         setIsObscured(true);
-        return originalGetDisplayMedia
-          .apply(this, arguments as any)
+        return originalGetDisplayMedia(constraints)
           .then((stream: MediaStream) => {
-            // If somehow allowed, still blur the page
             setIsObscured(true);
             return stream;
           });
