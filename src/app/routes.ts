@@ -8,42 +8,27 @@ import { AdminDashboard } from "./components/AdminDashboard";
 import { TermsPage } from "./components/TermsPage";
 import { PrivacyPage } from "./components/PrivacyPage";
 import { ConfidentialityPage } from "./components/ConfidentialityPage";
+import { RootLayout } from "./components/RootLayout";
+import { NotFoundRedirect } from "./components/NotFoundRedirect";
 
-export const router = createHashRouter([
-  {
-    path: "/",
-    Component: LandingPage,
-  },
-  {
-    path: "/apply",
-    Component: ApplicationPage,
-  },
-  {
-    path: "/login",
-    Component: LoginPage,
-  },
-  {
-    path: "/dashboard",
-    Component: MemberDashboard,
-  },
-  {
-    path: "/auction/:id",
-    Component: AuctionDetail,
-  },
-  {
-    path: "/admin",
-    Component: AdminDashboard,
-  },
-  {
-    path: "/terms",
-    Component: TermsPage,
-  },
-  {
-    path: "/privacy",
-    Component: PrivacyPage,
-  },
-  {
-    path: "/confidentiality",
-    Component: ConfidentialityPage,
-  },
-]);
+export const router = createHashRouter(
+  [
+    {
+      path: "/",
+      Component: RootLayout,
+      children: [
+        { index: true, Component: LandingPage },
+        { path: "apply", Component: ApplicationPage },
+        { path: "login", Component: LoginPage },
+        { path: "dashboard", Component: MemberDashboard },
+        { path: "auction/:id", Component: AuctionDetail },
+        { path: "admin", Component: AdminDashboard },
+        { path: "terms", Component: TermsPage },
+        { path: "privacy", Component: PrivacyPage },
+        { path: "confidentiality", Component: ConfidentialityPage },
+        { path: "*", Component: NotFoundRedirect },
+      ],
+    },
+  ],
+  { basename: "/" }
+);
