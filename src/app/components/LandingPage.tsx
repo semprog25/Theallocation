@@ -108,7 +108,7 @@ export function LandingPage() {
           </div>
         </div>
         <p className="mt-4 text-center md:text-left text-warm-gray font-sans" style={{ fontSize: '0.7rem', letterSpacing: '0.05em' }}>
-          Developed by SEMPROG
+          Developed and built by{" "}<a href="https://semprog.de" target="_blank" rel="noopener" style={{ color: "inherit", textDecoration: "underline", textUnderlineOffset: "2px" }}>SEMPROG</a>
         </p>
       </footer>
     </div>
