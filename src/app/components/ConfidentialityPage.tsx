@@ -191,6 +191,9 @@ function Footer() {
           </Link>
         </div>
       </div>
+      <p className="mt-4 text-center md:text-left text-warm-gray font-sans" style={{ fontSize: '0.7rem', letterSpacing: '0.05em' }}>
+        Developed by SEMPROG
+      </p>
     </footer>
   );
 }
